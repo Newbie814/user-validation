@@ -1,15 +1,10 @@
-/*
-=============== 
-Fonts
-===============
-*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
-
-/*
-=============== 
-Variables
-===============
-*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Raleway', monospace;
+}
 
 :root {
   /* dark shades of primary color*/
@@ -37,95 +32,33 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-size: 62.5%; /* 1rem = 10px */
 }
-body {
-  font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
+
+.container {
+  width: 100%;
   height: 100vh;
   display: flex;
-  /* flex-direction: column; */
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  /* overflow: hidden; */
-}
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  align-items: center;
 }
 
-/* --------------------------------project styling ---------------------------- */
-.text-experiment {
-  background-color: #090979;
-  background-image: linear-gradient(
-    90deg,
-    /* #020024 0%, */ #090979 35%,
-    #00d4ff 100%
-  );
-  background-size: 100%;
-  padding: 10px;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+.heading {
+  position: absolute;
+  top: 5rem;
+  font-size: 7rem;
+  font-weight: 300;
+  color: var(--clr-primary-4);
+  letter-spacing: 1rem;
+  text-shadow: 0.2rem 0.2rem 0.5rem var(--clr-grey-1);
 }
-/* ----------------------------end project styling ---------------------------- */
+
+.buttons {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
